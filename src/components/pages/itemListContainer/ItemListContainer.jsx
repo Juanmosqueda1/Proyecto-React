@@ -1,3 +1,4 @@
-export const ItemListContainer = () => {
-  return <div>ItemListContainer</div>;
+export const ItemListContainer = (props) => {
+  const { greeting } = props;
+  return <div>{greeting}</div>;
 };

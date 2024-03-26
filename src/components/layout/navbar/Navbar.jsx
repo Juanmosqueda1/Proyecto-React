@@ -8,7 +8,9 @@ export const Navbar = () => {
         <h1>logo</h1>
         <ul>
           {Categorias.map((Categoria, index) => (
-            <li key={index}>{Categoria}</li>
+            <li key={index}>
+              <a href={`#${Categoria}`}>{Categoria}</a>
+            </li>
           ))}
         </ul>
         <CartWidget />
