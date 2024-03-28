@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <header>
       <nav>
-        <h1>logo</h1>
+        <h1>CheckPoint</h1>
         <ul>
           {Categorias.map((Categoria, index) => (
             <li key={index} className="Pages">
