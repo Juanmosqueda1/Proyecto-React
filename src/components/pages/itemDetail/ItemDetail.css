@@ -1,0 +1,31 @@
+.card-detail{
+    width: 100%;
+    height: 80dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-detail{
+    height: 550px;
+    object-fit: contain;
+    border: black 2px solid;
+    border-right: none;
+}
+
+.img-detail img{
+    width: 100%;
+    height: 100%;
+}
+
+.texto-detail{
+    background-color: aquamarine;
+    height: 550px;
+    width: 40%;
+    border: black 2px solid;
+    border-left: none;
+}
+
+.texto-detail h1,h2{
+    margin:20px
+}

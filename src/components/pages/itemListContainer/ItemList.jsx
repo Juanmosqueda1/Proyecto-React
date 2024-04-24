@@ -1,15 +1,23 @@
 import { Grid } from "@mui/material";
 import ProductCard from "../../common/productCard/ProductCard";
+import "./ItemListContainer.css";
 
 const ItemList = ({ items }) => {
   return (
-    <Grid container>
-        {items.map(({id, nombre, descripcion, precio, img}) => {
-          return <Grid key={id} item>
-          <ProductCard nombre={nombre} img={img} descripcion={descripcion} precio={precio}/>
-          </Grid>
-        })}
-    </Grid>
+    <div className="tarjetas">
+      {items.map(({ id, nombre, descripcion, precio, img }) => {
+        return (
+          <ProductCard
+            key={id}
+            nombre={nombre}
+            img={img}
+            descripcion={descripcion}
+            precio={precio}
+            id={id}
+          />
+        );
+      })}
+    </div>
   );
 };
 
