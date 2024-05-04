@@ -1,0 +1,24 @@
+.allCart{
+    background-color: #94dafc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px #007bff solid;
+}
+
+.allCart button{
+    margin: 10px;
+}
+
+.imgCart{
+    margin: 10px;
+}
+
+.allCart h2{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imgCart img{
+    height: 180px; width: 120px;
+}

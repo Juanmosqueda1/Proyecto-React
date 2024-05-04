@@ -3,3 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.skeleton{
+  display: flex;
+  margin: 30px;
+  justify-content: space-between;
+  
+}

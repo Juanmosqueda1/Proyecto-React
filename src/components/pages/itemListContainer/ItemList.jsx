@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+
 import ProductCard from "../../common/productCard/ProductCard";
 import "./ItemListContainer.css";
 
