@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import * as React from "react";
 import { Skeleton } from "@mui/material";
 import "./ItemListContainer.css";
+import { db } from "../../../firebaseConfig";
+import { collection, getDocs, query, where, addDoc } from "firebase/firestore";
 
 export const ItemListContainer = () => {
   const { genero } = useParams();
@@ -13,25 +15,25 @@ export const ItemListContainer = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let productosFiltrados = products.filter(
-      (products) => products.categoria === genero
-    );
-
-    const getProducts = new Promise((resolve, reject) => {
-      let x = true;
-      if (x) {
-        setTimeout(() => {
-          resolve(genero ? productosFiltrados : products);
-        }, 1000);
-      } else {
-        reject("ha ocurrido un error");
-      }
+    const productsCollection = collection(db, "products");
+    let consulta = productsCollection;
+    if (genero) {
+      consulta = query(productsCollection, where("categoria", "==", genero));
+    }
+    getDocs(consulta).then((res) => {
+      let newArray = res.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
+      setItems(newArray);
     });
-
-    getProducts
-      .then((res) => setItems(res))
-      .catch((error) => [console.log(error)]);
   }, [genero]);
+
+  // const addDocsProduct = () =>{
+
+  //   let productsCollection = collection(db,"products")
+  //   products.forEach((product)=>     addDoc( productsCollection, product))
+
+  // }
 
   return (
     <>
@@ -66,7 +68,8 @@ export const ItemListContainer = () => {
               width={330}
               height={40}
             />
-          </div>          <div>
+          </div>{" "}
+          <div>
             <Skeleton
               sx={{ bgcolor: "grey.900" }}
               variant="rectangular"
@@ -79,7 +82,8 @@ export const ItemListContainer = () => {
               width={330}
               height={40}
             />
-          </div>          <div>
+          </div>{" "}
+          <div>
             <Skeleton
               sx={{ bgcolor: "grey.900" }}
               variant="rectangular"
@@ -92,7 +96,8 @@ export const ItemListContainer = () => {
               width={330}
               height={40}
             />
-          </div>          <div>
+          </div>{" "}
+          <div>
             <Skeleton
               sx={{ bgcolor: "grey.900" }}
               variant="rectangular"
@@ -108,6 +113,7 @@ export const ItemListContainer = () => {
           </div>
         </div>
       )}
+                {/* <button onClick={addDocsProduct}>agregar documentos</button> */}
     </>
   );
 };

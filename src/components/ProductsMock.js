@@ -1,26 +1,5 @@
 export let products = [
   {
-    id: 1,
-    nombre: "Red Dead Redemption 2",
-    precio: 50,
-    descripcion:
-      "Un épico juego de mundo abierto ambientado en el salvaje oeste, donde asumes el papel de Arthur Morgan, un forajido en busca de redención.",
-    img: "https://res.cloudinary.com/dugq5bp2r/image/upload/v1713194762/nw01mutrulvvxf7wqpe8.jpg",
-    stock: 5,
-    categoria: "Mundoabierto"
-  },
-  {
-    id: 2,
-    nombre: "Resident Evil 4 Remake",
-    precio: 60,
-    descripcion:
-      "Revive la terrorífica aventura de Leon Kennedy en esta versión remasterizada del clásico juego de survival horror, enfrentándote a hordas de infectados en busca de la hija del presidente.",
-    img: "https://res.cloudinary.com/dugq5bp2r/image/upload/v1713194763/nholcbvjrxqooyra049f.jpg",
-    stock: 5,
-    categoria: "Aventura"
-  },
-  {
-    id: 3,
     nombre: "Deep Rock Galactic",
     precio: 30,
     descripcion:
@@ -30,7 +9,6 @@ export let products = [
     categoria: "Cooperativo"
   },
   {
-    id: 4,
     nombre: "Helldivers 2",
     precio: 40,
     descripcion:
@@ -40,7 +18,6 @@ export let products = [
     categoria: "Cooperativo"
   },
   {
-    id: 5,
     nombre: "Zelda Breath of the Wild",
     precio: 55,
     descripcion:
@@ -50,7 +27,6 @@ export let products = [
     categoria: "Mundoabierto"
   },
   {
-    id: 6,
     nombre: "Lethal Company",
     precio: 45,
     descripcion:
@@ -60,7 +36,6 @@ export let products = [
     categoria: "Cooperativo"
   },
   {
-    id: 7,
     nombre: "GTA 5",
     precio: 45,
     descripcion:
@@ -70,7 +45,6 @@ export let products = [
     categoria: "Mundoabierto"
   },
   {
-    id: 8,
     nombre: "Call of Duty: Modern Warfare",
     precio: 55,
     descripcion:
@@ -80,7 +54,6 @@ export let products = [
     categoria: "Shooter"
   },
   {
-    id: 9,
     nombre: "Forza Horizon 5",
     precio: 60,
     descripcion:
@@ -90,7 +63,6 @@ export let products = [
     categoria: "Carreras"
   },
   {
-    id: 10,
     nombre: "Assassin's Creed Valhalla",
     precio: 60,
     descripcion:
@@ -100,7 +72,6 @@ export let products = [
     categoria: "Mundoabierto"
   },
   {
-    id: 11,
     nombre: "God of War 4",
     precio: 50,
     descripcion:
@@ -110,7 +81,6 @@ export let products = [
     categoria: "Aventura"
   },
   {
-    id: 12,
     nombre: "Minecraft",
     precio: 20,
     descripcion:
@@ -120,7 +90,6 @@ export let products = [
     categoria: "Mundoabierto"
   },
   {
-    id: 13,
     nombre: "Battlefield v",
     precio: 60,
     descripcion:
@@ -130,7 +99,6 @@ export let products = [
     categoria: "Shooter"
   },
   {
-    id: 14,
     nombre: "Need for Speed Rivals",
     precio: 40,
     descripcion:
@@ -140,7 +108,6 @@ export let products = [
     categoria: "Carreras"
   },
   {
-    id: 15,
     nombre: "Uncharted 4",
     precio: 40,
     descripcion:
