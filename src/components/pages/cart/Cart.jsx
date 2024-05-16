@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import "./cart.css";
+import "./Cart.css";
 import Swal from "sweetalert2";
 
 export const Cart = ({ cart, clearCart, deleteById, total }) => {
