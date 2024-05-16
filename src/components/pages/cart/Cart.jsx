@@ -16,7 +16,7 @@ export const Cart = ({ cart, clearCart, deleteById, total }) => {
       cancelButtonText: "cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        clearCart()
+        clearCart();
         Swal.fire({
           title: "Vaciado!",
           text: "Tu carrito ha sido vaciado",
@@ -27,16 +27,16 @@ export const Cart = ({ cart, clearCart, deleteById, total }) => {
   };
 
   return (
-    <div>
-      <h1>Este es el carrito</h1>
+    <div className="cart-container">
+      <h1 className="cart-title">Este es el carrito</h1>
       {cart.map((product) => (
         <div key={product.id} className="allCart">
           <div className="imgCart">
-            <img src={product.img} alt="" />
+            <img src={product.img} alt={product.nombre} />
           </div>
           <h2>{product.nombre}</h2>
           <h3>{product.quantity}</h3>
-          <h2> ${product.precio}</h2>
+          <h2>${product.precio}</h2>
           <Button onClick={() => deleteById(product.id)} variant="contained">
             Eliminar
           </Button>
@@ -44,14 +44,16 @@ export const Cart = ({ cart, clearCart, deleteById, total }) => {
       ))}
 
       {cart.length > 0 && (
-        <div>
-          <h2>el total a pagar es {total}</h2>
-          <Button onClick={clearCartAlert} variant="outlined">
-            Limpiar carrito
-          </Button>
-          <Link to="/checkout">
-            <Button variant="contained">finalizar compra</Button>
-          </Link>
+        <div className="cart-summary">
+          <h2>El total a pagar es ${total}</h2>
+          <div className="cart-buttons">
+            <Button onClick={clearCartAlert} variant="outlined">
+              Limpiar carrito
+            </Button>
+            <Link to="/checkout">
+              <Button variant="contained">Finalizar compra</Button>
+            </Link>
+          </div>
         </div>
       )}
     </div>

@@ -1,11 +1,8 @@
 import CartContextProvider from "./context/CartContext";
 import { Layout } from "./components/layout/Layout";
-import { Footer } from "./components/layout/footer/Footer";
-import { Navbar } from "./components/layout/navbar/Navbar";
 import CartContainer from "./components/pages/cart/CartContainer";
 import { Checkout } from "./components/pages/checkout/Checkout";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
-import ItemList from "./components/pages/itemListContainer/ItemList";
 import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 

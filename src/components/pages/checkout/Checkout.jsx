@@ -3,6 +3,7 @@ import { Button, TextField } from "@mui/material";
 import { CartContext } from "../../../context/CartContext";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
+import "./Checkout.css"
 
 export const Checkout = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
@@ -42,37 +43,42 @@ export const Checkout = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       {orderId ? (
-        <h1>su id es: {orderId}</h1>
+        <div className="order-id-container">
+          <h1>Su id es: {orderId}</h1>
+        </div>
       ) : (
         <form onSubmit={handleSubmit}>
           <TextField
             id="outlined-basic"
-            label="nombre"
+            label="Nombre"
             variant="outlined"
             type="text"
             onChange={handleChange}
             name="nombre"
+            fullWidth
           />
           <TextField
             id="outlined-basic"
-            label="telefono"
+            label="Teléfono"
             variant="outlined"
             type="text"
             onChange={handleChange}
             name="telefono"
+            fullWidth
           />
           <TextField
             id="outlined-basic"
-            label="email"
+            label="Email"
             variant="outlined"
-            type="text"
+            type="email"
             onChange={handleChange}
             name="email"
+            fullWidth
           />
-          <Button type="submit" variant="contained">
-            comprar
+          <Button type="submit" variant="contained" className="form-button">
+            Comprar
           </Button>
         </form>
       )}
